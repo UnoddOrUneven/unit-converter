@@ -1,0 +1,34 @@
+
+<form style >
+  <script src = length.js></script>
+  <div class="field" name = "Quantity">
+    <label>Enter the length to convert</label>
+    <input type="number">
+  </div>
+  <div class="field">
+    <label>Unit to convert from</label>
+
+    <select class="field" name="FromUnit">
+      <option value="Meters">Meters</option>
+      <option value="Kilometers">Kilometers</option>
+      <option value="Miles">Miles</option>
+      <option value="Feet">Feet</option>
+    </select>
+  </div>
+
+  <div class="field">
+    <label>Unit to convert to</label>
+    <select class="field" name="ToUnit">
+      <option value="Meters">Meters</option>
+      <option value="Kilometers">Kilometers</option>
+      <option value="Miles">Miles</option>
+      <option value="Feet">Feet</option>
+    </select>
+  </div>
+
+  <input class = "ConvertButton" type="button" value="Convert" onclick="await convertLength()">
+
+
+
+</form>
+
