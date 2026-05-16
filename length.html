@@ -1,14 +1,14 @@
 
 <form style >
   <script src = length.js></script>
-  <div class="field" name = "Quantity">
+  <div class="field" >
     <label>Enter the length to convert</label>
-    <input type="number">
+    <input type="number" id = "Amount">
   </div>
   <div class="field">
     <label>Unit to convert from</label>
 
-    <select class="field" name="FromUnit">
+    <select class="field" id="FromUnit">
       <option value="Meters">Meters</option>
       <option value="Kilometers">Kilometers</option>
       <option value="Miles">Miles</option>
@@ -18,7 +18,7 @@
 
   <div class="field">
     <label>Unit to convert to</label>
-    <select class="field" name="ToUnit">
+    <select class="field" id="ToUnit">
       <option value="Meters">Meters</option>
       <option value="Kilometers">Kilometers</option>
       <option value="Miles">Miles</option>
@@ -26,7 +26,7 @@
     </select>
   </div>
 
-  <input class = "ConvertButton" type="button" value="Convert" onclick="await convertLength()">
+  <input class = "ConvertButton" type="button" value="Convert" onclick="convertLength(document.getElementById('Amount').value, document.getElementById('FromUnit').value, document.getElementById('ToUnit').value)">
 
 
 
