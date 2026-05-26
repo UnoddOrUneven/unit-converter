@@ -1,26 +1,32 @@
 <form style >
+    <script src = "weight.js"></script>
     <div class="field">
         <label>Enter the weight to convert</label>
-        <input type="number">
+        <input type="number" id = "Amount">
     </div>
     <div class="field">
         <label>Unit to convert from</label>
 
-        <select class="field">
-            <option value="Celsius">Celsius</option>
-            <option value="Kelvin">Kelvin</option>
-            <option value="Fahrenheit">Fahrenheit</option>
+        <select class="field" id = "FromUnit">
+            <option value="Milligram">Milligram</option>
+            <option value="Gram">Gram</option>
+            <option value="Kilogram">Kilogram</option>
+            <option value="Ounce">Ounce</option>
+            <option value="Pound">Pound</option>
         </select>
     </div>
 
     <div class="field">
         <label>Unit to convert to</label>
-        <select class="field">
-            <option value="Celsius">Celsius</option>
-            <option value="Kelvin">Kelvin</option>
-            <option value="Fahrenheit">Fahrenheit</option>
+        <select class="field" id = "ToUnit">
+            <option value="Milligram">Milligram</option>
+            <option value="Gram">Gram</option>
+            <option value="Kilogram">Kilogram</option>
+            <option value="Ounce">Ounce</option>
+            <option value="Pound">Pound</option>
         </select>
     </div>
 
-    <input class = "ConvertButton" type="button" value="Convert">
+    <input class = "ConvertButton" type="button" value="Convert" onclick="convertWeight(document.getElementById('Amount').value, document.getElementById('FromUnit').value, document.getElementById('ToUnit').value)">
+
 </form>

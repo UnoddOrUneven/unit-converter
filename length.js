@@ -9,5 +9,8 @@ async function convertLength(amount,convertFrom,convertTo) {
     const lengthInMeters = amount * metersConvert[convertFrom];
     console.log(` ${amount} ${convertFrom}   = ${lengthInMeters / metersConvert[convertTo]} ${convertTo}`);
 
-    return lengthInMeters / metersConvert[convertTo];
+    let result = lengthInMeters / metersConvert[convertTo]
+
+    showResult(convertFrom,convertTo,amount,result);
 }
+
