@@ -1,12 +1,12 @@
 <form style >
     <div class="field">
         <label>Enter the temperature to convert</label>
-        <input type="number">
+        <input type="number" id = "Amount">
     </div>
     <div class="field">
         <label>Unit to convert from</label>
 
-        <select class="field">
+        <select class="field" id="FromUnit">
             <option value="Celsius">Celsius</option>
             <option value="Kelvin">Kelvin</option>
             <option value="Fahrenheit">Fahrenheit</option>
@@ -15,12 +15,13 @@
 
     <div class="field">
         <label>Unit to convert to</label>
-        <select class="field">
+        <select class="field" id = "ToUnit">
             <option value="Celsius">Celsius</option>
             <option value="Kelvin">Kelvin</option>
             <option value="Fahrenheit">Fahrenheit</option>
         </select>
     </div>
 
-    <input class = "ConvertButton" type="button" value="Convert">
+    <input class = "ConvertButton" type="button" value="Convert" onclick="convertTemperature(document.getElementById(`Amount`).value, document.getElementById(`FromUnit`).value, document.getElementById(`ToUnit`).value)">
+    >
 </form>

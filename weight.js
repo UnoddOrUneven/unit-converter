@@ -7,9 +7,8 @@ async function convertWeight(amount,convertFrom,convertTo) {
         "Pound": 453592.37
     }
 
+    amount = Number(amount)
     const weightInMilligram = amount * milligramConvert[convertFrom];
-
-
     let result = weightInMilligram / milligramConvert[convertTo]
 
     showResult(convertFrom,convertTo,amount,result);
